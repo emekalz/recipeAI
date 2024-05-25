@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compactible" content="ie=edge" content="IE=7">
+    <meta name="author" content="Chukwuemeka-Olobi-Isiolu">
+    <meta name="keywords" content="dependent (edit content according to system use)">
+    <meta name="tools" tabindex="HTML 5, PHP 8, Bootstrap 4, SCSS, CSS, Jquery, PHP AJAX, JSON, Vue, Materialised Vue, JavaScript">
+
+    <title>Recipe AI</title>
+
+    <link rel="shortcut icon" type="image/logo" href="img/circles.jpeg">
+   
+    <!-- Bootstrap Stylesheets --> 
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-grid.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-reboot.css">
+    
+    <!-- SCSS Tools -->
+     <link rel="stylesheet" type="text/scss" href="css/scss/bootstrap-grid.scss">
+     <link rel="stylesheet" type="text/scss" href="css/scss/bootstrap-reboot.scss">
+     <link rel="stylesheet" type="text/scss" href="css/scss/bootstrap.scss">
+    
+    <!-- Font-awesome Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/regular.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/solid.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/svg-with-js.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/v4-shims.css">
+    
+    <!-- Font-awesome Less -->
+    <link rel="stylesheet" type="text/less" href="fontawesome/less/fontawesome.less">
+    <link rel="stylesheet" type="text/less" href="fontawesome/less/brands.less">
+    <link rel="stylesheet" type="text/less" href="fontawesome/less/regular.less">
+    <link rel="stylesheet" type="text/less" href="fontawesome/less/solid.less">
+    <link rel="stylesheet" type="text/less" href="fontawesome/less/v4-shims.less">
+
+
+    <!-- Font-awesome Scss -->
+    
+    <link rel="stylesheet" type="text/scss" href="fontawesome/scss/brands.scss">
+    <link rel="stylesheet" type="text/scss" href="fontawesome/scss/fontawesome.scss">
+    <link rel="stylesheet" type="text/scss" href="fontawesome/scss/regular.scss">
+    <link rel="stylesheet" type="text/scss" href="fontawesome/scss/solid.scss">
+    <link rel="stylesheet" type="text/scss" href="fontawesome/scss/v4-shims.scss">
+
+    <!-- my-styleshhets -->
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/sb-admin-2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/recipeai.css">
+    
+
+  
+</head>
+<body id="top-page">
+
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient sidebar sidebar-light accordion" id="accordionSidebar">                 
+
+                
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                
+            <div class="word">
+                Recipes
+            </div>
+               
+             
+
+            </div>
+
+            <!-- header----img -->
+               
+           
+            <hr class="sidebar-divider">
+           
+
+            <!-- Nav Item -   Recipe's -->
+            <li class="nav-item">
+                   
+                    <!-- Recipes from API would be here  -->
+                    
+                
+            </li>   
+           
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+           
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Search button---------  most important -->
+
+                    <!-- Topbar Search -->
+                    <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search over 1,000,000 recipes..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"placeholder="Search over 1,000,000 recipes..." aria-label="Search" aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <li class="nav-item highlight no-arrow mx-1 list-goup-item-primary">
+                                <a class="nav-link highlight text-primary" id="highlight" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-heart fa-fw mr-2"></i>                                   
+                                        fovourites
+                                </a>
+                              
+                            </li>
+                            
+
+                        </li>
+
+                        <!-- -------------------------------------------------------------------------------------------------- -->                        
+
+                    </ul> 
+                </nav>
+                <!-- End of Topbar -->
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                <div class="media-recipe">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi, aliquid?
+                </div>
+            </div>
+                <br>
+            <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                <div class="media-list">
+                    <h5>
+                        MY SHOPPING LIST
+                    </h5>
+                    <i class="fa-fa--solid-heart fa-fw"></i>
+                </div>
+            </div>
+
+
+            <div class="footer">
+               
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+
+      <!-- main-jquery and other interactive scripts here -->
+      <script src="js/jquery.js"></script>
+      <script src="js/bundle.js"></script>
+      <script src="js/bootstrap.js"></script>
+      <script src="js/bootstrap.bundle.js"></script>
+
+      <script src="js/jquery.easing.min.js"></script>
+      <script src="js/sb-admin-2.js"></script>
+      <script src="js/Chart.min.js"></script>
+
+      <script src="js/chart-area-demo.js"></script>
+      <script src="js/chart-pie-demo.js"></script>
+
+
+      <script src="js/npm.js"></script>
+      <script src="js/resy.js"></script>
+
+                    
+      
+      <!-- Linked-fontawesome-Scripts -->
+      <script src="fontawesome/js/fontawesome.js"></script>
+      <script src="fontawesome/js/all.js"></script>
+      <script src="fontawesome/js/brands.js"></script>
+      <script src="fontawesome/js/conflict-detection.js"></script>
+      <script src="fontawesome/js/regular.js"></script>
+      <script src="fontawesome/js/solid.js"></script>
+      <script src="fontawesome/js/v4-shims.js"></script>
+      
+</body>
+</html>
